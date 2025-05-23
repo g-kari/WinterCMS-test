@@ -6,18 +6,18 @@ services:
     build:
       context: ./docker/php
       dockerfile: Dockerfile
-    container_name: statamic-app
+    container_name: winter-app
     restart: unless-stopped
     working_dir: /var/www
     volumes:
       - ./:/var/www
     networks:
-      - statamic
+      - winter
 
   # Nginx Service
   web:
     image: nginx:1.25
-    container_name: statamic-nginx
+    container_name: winter-nginx
     restart: unless-stopped
     ports:
       - "80:80"
@@ -25,47 +25,47 @@ services:
       - ./:/var/www
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     networks:
-      - statamic
+      - winter
     depends_on:
       - app
 
   # MySQL Service
   db:
     image: mysql:8.0
-    container_name: statamic-mysql
+    container_name: winter-mysql
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: statamic
+      MYSQL_DATABASE: winter
       MYSQL_ROOT_PASSWORD: root
       MYSQL_PASSWORD: secret
-      MYSQL_USER: statamic
+      MYSQL_USER: winter
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
-      - statamic-mysql:/var/lib/mysql
+      - winter-mysql:/var/lib/mysql
     ports:
       - "3306:3306"
     networks:
-      - statamic
+      - winter
 
   # Valkey Service (Redis fork)
   valkey:
     image: valkey/valkey:latest
-    container_name: statamic-valkey
+    container_name: winter-valkey
     restart: unless-stopped
     ports:
       - "6379:6379"
     volumes:
-      - statamic-valkey:/data
+      - winter-valkey:/data
     networks:
-      - statamic
+      - winter
 
 networks:
-  statamic:
+  winter:
     driver: bridge
 
 volumes:
-  statamic-mysql:
+  winter-mysql:
     driver: local
-  statamic-valkey:
+  winter-valkey:
     driver: local
