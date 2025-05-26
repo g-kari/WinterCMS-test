@@ -28,3 +28,14 @@ Homestead.json
 .env.production
 .phpactor.json
 auth.json
+
+# WinterCMS specific
+/mywintercms/storage/framework/cache/*
+/mywintercms/storage/framework/sessions/*
+/mywintercms/storage/framework/views/*
+/mywintercms/storage/cms/cache/*
+/mywintercms/storage/cms/combiner/*
+/mywintercms/storage/cms/twig/*
+/mywintercms/storage/logs/*
+/mywintercms/storage/temp/*
+/public.backup
