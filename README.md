@@ -2,7 +2,7 @@
 
 ## Docker Development Environment
 
-This repository includes a complete Docker-based development environment with PHP-FPM, Nginx, MySQL, and Valkey (Redis fork) for evaluating WinterCMS.
+This repository includes a complete Docker-based development environment with PHP-FPM, Nginx, MySQL, and Valkey (Redis fork) for WinterCMS.
 
 ### Prerequisites
 
@@ -24,18 +24,20 @@ This repository includes a complete Docker-based development environment with PH
 
 3. Install WinterCMS:
    ```
-   docker exec -it winter-app bash /var/www/setup-wintercms.sh
+   docker exec -it winter-app bash -c "bash /var/www/install-winter.sh"
    ```
 
-4. Complete the installation through the web interface:
+4. Complete the setup by visiting:
    ```
    http://localhost/install.php
    ```
 
-5. Access the WinterCMS admin panel:
+5. Access the WinterCMS backend:
    ```
    http://localhost/backend
    ```
+
+For detailed setup instructions, see the [WINTER-SETUP.md](WINTER-SETUP.md) file.
 
 ### Environment Details
 
@@ -75,3 +77,5 @@ If you encounter any issues:
    ```
    docker-compose restart
    ```
+
+4. For more specific troubleshooting steps, see the [WINTER-SETUP.md](WINTER-SETUP.md) file.
