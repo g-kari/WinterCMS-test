@@ -1,0 +1,22 @@
+# ===================================
+# Form Field Definitions
+# ===================================
+
+fields:
+    t_user_id:
+        label: User
+        type: relation
+        nameFrom: user_name
+        required: true
+        
+    setting_key:
+        label: Setting Key
+        span: left
+        required: true
+        
+    setting_value:
+        label: Setting Value
+        type: textarea
+        size: small
+        span: right
+        required: true

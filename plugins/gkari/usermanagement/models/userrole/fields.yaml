@@ -1,0 +1,17 @@
+# ===================================
+# Form Field Definitions
+# ===================================
+
+fields:
+    role_name:
+        label: Role Name
+        span: full
+        required: true
+        
+tabs:
+    fields:
+        users:
+            label: Users with this Role
+            type: relation
+            tab: Users
+            commentAbove: Users assigned to this role

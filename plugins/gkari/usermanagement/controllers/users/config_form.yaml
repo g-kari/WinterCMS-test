@@ -1,0 +1,31 @@
+# ===================================
+# Form Behavior Config
+# ===================================
+
+# Record name
+name: User
+
+# Model Form Field configuration
+form: $/gkari/usermanagement/models/user/fields.yaml
+
+# Model Class name
+modelClass: Gkari\UserManagement\Models\User
+
+# Default redirect location
+defaultRedirect: gkari/usermanagement/users
+
+# Create page
+create:
+    title: Create User
+    redirect: gkari/usermanagement/users/update/:id
+    redirectClose: gkari/usermanagement/users
+
+# Update page
+update:
+    title: Edit User
+    redirect: gkari/usermanagement/users
+    redirectClose: gkari/usermanagement/users
+
+# Preview page
+preview:
+    title: Preview User

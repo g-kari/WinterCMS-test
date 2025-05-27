@@ -1,0 +1,31 @@
+# ===================================
+# Form Behavior Config
+# ===================================
+
+# Record name
+name: User Log
+
+# Model Form Field configuration
+form: $/gkari/usermanagement/models/userlog/fields.yaml
+
+# Model Class name
+modelClass: Gkari\UserManagement\Models\UserLog
+
+# Default redirect location
+defaultRedirect: gkari/usermanagement/userlogs
+
+# Create page
+create:
+    title: Create User Log
+    redirect: gkari/usermanagement/userlogs/update/:id
+    redirectClose: gkari/usermanagement/userlogs
+
+# Update page
+update:
+    title: Edit User Log
+    redirect: gkari/usermanagement/userlogs
+    redirectClose: gkari/usermanagement/userlogs
+
+# Preview page
+preview:
+    title: Preview User Log

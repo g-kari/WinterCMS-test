@@ -1,0 +1,30 @@
+# ===================================
+# List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+        
+    user:
+        label: User
+        relation: user
+        select: user_name
+        searchable: true
+        
+    log_type:
+        label: Log Type
+        searchable: true
+        
+    log_message:
+        label: Log Message
+        searchable: true
+        
+    created_at:
+        label: Created At
+        type: datetime
+        
+    created_by:
+        label: Created By
+        searchable: true
