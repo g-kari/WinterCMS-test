@@ -1,0 +1,22 @@
+# ===================================
+# Form Field Definitions
+# ===================================
+
+fields:
+    t_user_id:
+        label: User
+        type: relation
+        nameFrom: user_name
+        required: true
+        
+    log_type:
+        label: Log Type
+        span: left
+        required: true
+        
+    log_message:
+        label: Log Message
+        type: textarea
+        size: large
+        span: right
+        required: true

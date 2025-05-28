@@ -1,0 +1,24 @@
+# ===================================
+# List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+        
+    role_name:
+        label: Role Name
+        searchable: true
+        
+    created_at:
+        label: Created At
+        type: datetime
+        
+    updated_at:
+        label: Updated At
+        type: datetime
+        
+    created_by:
+        label: Created By
+        searchable: true

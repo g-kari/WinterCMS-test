@@ -1,0 +1,35 @@
+# ===================================
+# Form Field Definitions
+# ===================================
+
+fields:
+    public_user_id:
+        label: Public User ID
+        span: left
+        required: true
+        comment: Unique identifier for the user that is public facing
+    
+    user_name:
+        label: User Name
+        span: right
+        required: true
+        
+tabs:
+    fields:
+        roles:
+            label: User Roles
+            type: relation
+            tab: Roles
+            commentAbove: Assign roles to this user
+        
+        settings:
+            label: User Settings
+            type: partial
+            path: $/gkari/usermanagement/controllers/users/_settings_relation.htm
+            tab: Settings
+            
+        logs:
+            label: User Logs
+            type: partial
+            path: $/gkari/usermanagement/controllers/users/_logs_relation.htm
+            tab: Logs

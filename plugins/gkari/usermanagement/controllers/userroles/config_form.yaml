@@ -1,0 +1,31 @@
+# ===================================
+# Form Behavior Config
+# ===================================
+
+# Record name
+name: User Role
+
+# Model Form Field configuration
+form: $/gkari/usermanagement/models/userrole/fields.yaml
+
+# Model Class name
+modelClass: Gkari\UserManagement\Models\UserRole
+
+# Default redirect location
+defaultRedirect: gkari/usermanagement/userroles
+
+# Create page
+create:
+    title: Create User Role
+    redirect: gkari/usermanagement/userroles/update/:id
+    redirectClose: gkari/usermanagement/userroles
+
+# Update page
+update:
+    title: Edit User Role
+    redirect: gkari/usermanagement/userroles
+    redirectClose: gkari/usermanagement/userroles
+
+# Preview page
+preview:
+    title: Preview User Role
